@@ -153,11 +153,11 @@ Using the solvers directly:
 ```python
 from admm_svm import load_banknote, admm_distributed, reference_solution, accuracy, graph
 
-data = load_banknote()                 # 500 train / 872 test, standardised
+data = load_banknote()  # 500 train / 872 test, standardised
 problem = data.problem(lam=0.01)
 
-run = admm_distributed(problem, adjacency=graph.ring(8), n_iter=1000)   # any connected network
-_, f_star = reference_solution(problem)                                 # scikit-learn optimum
+run = admm_distributed(problem, adjacency=graph.ring(8), n_iter=1000)  # any connected network
+_, f_star = reference_solution(problem)  # scikit-learn optimum
 
 print(f"gap to optimum : {run.objective[-1] - f_star:.1e}")
 print(f"node spread    : {run.consensus_error[-1]:.1e}")

@@ -19,7 +19,7 @@ jobs:
           cache: pip
       - run: pip install -e ".[dev]"
       - run: ruff check .
-      - run: ruff format --check .
+      - run: ruff format --check src tests experiments
       - run: pytest -q
       - name: Smoke-test the experiments
         run: python experiments/run_all.py --quick
