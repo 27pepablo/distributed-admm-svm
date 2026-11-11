@@ -1,0 +1,107 @@
+{
+  "problem": {
+    "n_train": 500,
+    "n_test": 872,
+    "lambda": 0.01,
+    "f_star": 0.10374588634221771,
+    "f_sklearn": 0.10374588650809458,
+    "test_accuracy_optimum": 0.981651376146789,
+    "n_iter": 2000
+  },
+  "algorithms": {
+    "subgradient": {
+      "objective": 0.10374604459611338,
+      "gap_final": 1.5825389566848092e-07,
+      "iters_to_1e-3": 15,
+      "iters_to_1e-5": 296,
+      "iters_to_1e-7": null,
+      "train_accuracy": 0.978,
+      "test_accuracy": 0.981651376146789,
+      "ms_per_iteration": 0.042129199999862976
+    },
+    "centralized": {
+      "objective": 0.10374588635344331,
+      "gap_final": 3.571046236494624e-12,
+      "iters_to_1e-3": 9,
+      "iters_to_1e-5": 85,
+      "iters_to_1e-7": 657,
+      "train_accuracy": 0.978,
+      "test_accuracy": 0.981651376146789,
+      "ms_per_iteration": 0.058668249999982436
+    },
+    "distributed": {
+      "objective": 0.10374588706529392,
+      "gap_final": 1.2444120733867692e-10,
+      "iters_to_1e-3": 12,
+      "iters_to_1e-5": 154,
+      "iters_to_1e-7": 778,
+      "train_accuracy": 0.978,
+      "test_accuracy": 0.981651376146789,
+      "ms_per_iteration": 0.25447269999995115
+    }
+  },
+  "nodes_alone": {
+    "test_accuracy_even_split": [
+      0.9759174311926605,
+      0.9850917431192661,
+      0.9862385321100917,
+      0.9701834862385321,
+      0.9759174311926605
+    ],
+    "single_class_nodes_in_skewed_split": 4,
+    "skewed_iters_to_1e-5": 174,
+    "skewed_test_accuracy": 0.981651376146789,
+    "skewed_node_spread_final": 6.964021337039664e-08
+  },
+  "rho_sweep": {
+    "tolerance": 1e-05,
+    "centralized": {
+      "0.1": 268,
+      "0.3": 109,
+      "1.0": 85,
+      "3.0": 230,
+      "10.0": 747,
+      "30.0": 2237
+    },
+    "distributed_rho_consensus": {
+      "0.002": 612,
+      "0.005": 298,
+      "0.02": 154,
+      "0.05": 135,
+      "0.2": 296,
+      "1.0": 1099
+    }
+  },
+  "topologies": {
+    "path": {
+      "edges": 4,
+      "algebraic_connectivity": 0.3819660112501052,
+      "iters_to_1e-3": 34,
+      "iters_to_1e-5": 217
+    },
+    "project tree": {
+      "edges": 4,
+      "algebraic_connectivity": 0.5188056959079842,
+      "iters_to_1e-3": 16,
+      "iters_to_1e-5": 174
+    },
+    "star": {
+      "edges": 4,
+      "algebraic_connectivity": 1.0,
+      "iters_to_1e-3": 17,
+      "iters_to_1e-5": 217
+    },
+    "ring": {
+      "edges": 5,
+      "algebraic_connectivity": 1.381966011250105,
+      "iters_to_1e-3": 18,
+      "iters_to_1e-5": 215
+    },
+    "complete": {
+      "edges": 10,
+      "algebraic_connectivity": 4.999999999999996,
+      "iters_to_1e-3": 15,
+      "iters_to_1e-5": 180
+    }
+  }
+}
